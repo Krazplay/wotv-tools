@@ -1247,7 +1247,7 @@
             break;
           default:
             if (artifactListByCat[i]) {
-              let type = i < 17 ? 'weapon' : (i < 22 ? 'armor' : (i == 22 ? 'accessory' : ''));
+              let type = i < 17 ? 'weapon' : (i < 22 ? 'armor' : (i == 22 ? 'accessory' : (i == 24 ? 'weapon' : '')));
               categories.push({
                 type: type,
                 index: i,
