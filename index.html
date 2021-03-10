@@ -31,7 +31,7 @@
 </head>
 <body>
   <div id="header">
-    Equipment Calculator
+    Equipment Calculator (forked to repair gloves) 
     <div id="css_toggle" onclick="toggleCSS()">
       <img id="light" src="https://raw.githubusercontent.com/shalzuth/wotv-ffbe-dump/master/img/items/IT_UN_AW_SHINE.png" title="Turn off Dark Mode"/>
       <img id="dark" src="https://raw.githubusercontent.com/shalzuth/wotv-ffbe-dump/master/img/items/IT_UN_AW_DARK.png" title="Turn on Dark Mode"/>
@@ -1155,6 +1155,7 @@
         // for some reason doesn't match exactly
         artifactCategoryList.splice(18,2); // LIGHTSHIELD, HEAVYSHIELD
         artifactCategoryList.splice(22,3); // LIGHTARMOR, HEAVYARMOR, ROBE
+		artifactCategoryList.splice(23,1); // SEPARATOR
 
         resolve();
       });
@@ -1247,7 +1248,7 @@
             break;
           default:
             if (artifactListByCat[i]) {
-              let type = i < 17 ? 'weapon' : (i < 22 ? 'armor' : (i == 22 ? 'accessory' : (i == 24 ? 'weapon' : '')));
+              let type = i < 17 ? 'weapon' : (i < 22 ? 'armor' : (i == 22 ? 'accessory' : (i == 23 ? 'weapon' : '')));
               categories.push({
                 type: type,
                 index: i,
